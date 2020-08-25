@@ -1,0 +1,6 @@
+.header {
+  .container {
+    @extend %container;
+    @include flex-justify(center);
+  }
+}

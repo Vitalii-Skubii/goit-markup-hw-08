@@ -1,0 +1,17 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  background-color: #ffffff;
+  color: $main-text-color;
+  font-family: $main-font;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
