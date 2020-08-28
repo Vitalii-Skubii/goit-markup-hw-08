@@ -4,8 +4,11 @@
 @import './utils/img';
 @import './utils/placeholdeers';
 @import './utils/mixins';
+@import './utils/modal';
 @import './components/header';
 @import './components/logo';
+@import "./components/nav";
+@import "./components/adress";
 
 
 @import './components/hero';
@@ -14,3 +17,5 @@
 @import "./components/socials";
 @import "./components/clients";
 @import "./components/footer";
+@import './components/projects';
+@import './components/filter-gallery';
