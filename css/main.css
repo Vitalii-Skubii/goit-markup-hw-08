@@ -181,8 +181,12 @@ img {
   display: block;
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   background-color: rgba(0, 0, 0, 0.2);
+  padding-top: 93px;
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow-y: scroll;
 }
 
 .modal-backdrop.is-hidden {
@@ -191,28 +195,26 @@ img {
 }
 
 .modal-form {
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: fixed;
-  width: 100%;
-  position: absolute;
-  top: 221px;
-  left: 50%;
-  transform: translateX(-50%);
   background-color: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding-top: 40px;
   padding-bottom: 40px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .modal-form {
+    width: 450px;
+  }
 }
 
 .modal-input {
   display: block;
-  width: 448px;
+  width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -367,6 +369,7 @@ img {
 
 .header {
   position: relative;
+  border-bottom: 1px solid #ECECEC;
 }
 
 @media screen and (min-width: 480px) {
@@ -386,21 +389,31 @@ img {
   }
 }
 
-.header-menu__button {
-  width: 40px;
-  height: 40px;
+@media screen and (max-width: 767px) {
+  .header-menu__button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+  }
+  .header-menu__button:hover, .header-menu__button:focus {
+    outline: none;
+  }
+  .header-menu__button .icon-menu-close {
+    display: none;
+  }
+  .header-menu__button.is-open .icon-menu-close {
+    display: block;
+  }
+  .header-menu__button.is-open .icon-menu {
+    display: none;
+  }
 }
 
-.header-menu__button .icon-menu-close {
-  display: none;
-}
-
-.header-menu__button.is-open .icon-menu-close {
-  display: block;
-}
-
-.header-menu__button.is-open .icon-menu {
-  display: none;
+@media screen and (min-width: 768px) {
+  .header-menu__button {
+    display: none;
+  }
 }
 
 .logo {
@@ -426,18 +439,20 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #ECECEC;
 }
 
 @media screen and (max-width: 767px) {
   .header-menu__wraper {
-    display: none;
     position: absolute;
     top: 60px;
     left: 0;
-    border-top: 1px solid #ECECEC;
     background-color: #fff;
     width: 100%;
+    display: none;
+    z-index: 3;
+  }
+  .header-menu__wraper.is-open {
+    display: block;
   }
 }
 
@@ -570,21 +585,25 @@ img {
   background-color: #188ce8;
 }
 
-@media screen and (max-width: 1199px) {
-  .advantages .container {
-    text-align: center;
-    padding-top: 60px;
-    padding-bottom: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.advantages .container {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 480px) {
   .advantages .container {
     width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .advantages .container {
+    width: 768px;
   }
 }
 
@@ -620,21 +639,33 @@ img {
   background-color: #f5f4fa;
 }
 
-@media screen and (max-width: 1199px) {
-  .team .container {
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.team .container {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 480px) {
   .team .container {
     width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team .container {
+    width: 1200px;
+    padding-left: 215px;
+    padding-right: 215px;
   }
 }
 
@@ -718,21 +749,25 @@ img {
   margin-right: 10px;
 }
 
-@media screen and (max-width: 1199px) {
-  .clients .container {
-    text-align: center;
-    padding-top: 60px;
-    padding-bottom: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.clients .container {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 480px) {
   .clients .container {
     width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients .container {
+    width: 768px;
   }
 }
 
@@ -790,10 +825,25 @@ img {
 }
 
 .footer .container {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 30px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .footer .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer .container {
+    width: 768px;
+  }
 }
 
 .footer {
@@ -994,10 +1044,25 @@ img {
 }
 
 .gallery .container {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 30px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .gallery .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .gallery .container {
+    width: 768px;
+  }
 }
 
 .filter-list {

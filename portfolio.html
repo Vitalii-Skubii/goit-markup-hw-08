@@ -22,21 +22,21 @@
             <use class="icon-menu-close" href="./images/sprite.svg#icon-menu-close"></use>
           </svg>
         </button>
-        <div class="header-menu__wraper">
+        <div class="header-menu__wraper" data-menu>
           <nav class="nav-menu">
 
             <ul class="nav-list">
               <li class="nav-list-item">
 
-                <a class="nav-link nav-current-link" href="">Студия</a>
+                <a class="nav-link " href="./index.html">Студия</a>
 
               </li>
               <li class="nav-list-item">
-                <a class="nav-link" href="./portfolio.html">Портфолио</a>
+                <a class="nav-link nav-current-link" href=""">Портфолио</a>
               </li>
 
-              <li class="nav-list-item">
-                <a class="nav-link" href="">Контакты</a>
+              <li class=" nav-list-item">
+                  <a class="nav-link" href="">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -257,8 +257,8 @@
       <div class="footer-social">
         <b class="join">присоединяйтесь</b>
         <ul class="footer-social-list">
-          <li class="social-list-item">
-            <a class="social-list-link footer-social-link" href="" aria-label="инстаграм">
+          <li class="social-list__item">
+            <a class="social-list__link footer-social-link" href="" aria-label="инстаграм">
               <svg class="social-list-icon footer-social-icon" width="20" height="20">
                 <use href="./images/sprite.svg#icon-instagram"></use>
               </svg>
@@ -266,8 +266,8 @@
                                               /> -->
             </a>
           </li>
-          <li class="social-list-item">
-            <a class="social-list-link footer-social-link" href="" aria-label="твиттер">
+          <li class="social-list__item">
+            <a class="social-list__link footer-social-link" href="" aria-label="твиттер">
               <svg class="social-list-icon footer-social-icon" width="20" height="20">
                 <use href="./images/sprite.svg#icon-twitter"></use>
               </svg>
@@ -275,8 +275,8 @@
                                               /> -->
             </a>
           </li>
-          <li class="social-list-item">
-            <a class="social-list-link footer-social-link" href="" aria-label="фейсбук">
+          <li class="social-list__item">
+            <a class="social-list__link footer-social-link" href="" aria-label="фейсбук">
               <svg class="social-list-icon footer-social-icon" width="20" height="20">
                 <use href="./images/sprite.svg#icon-facebook"></use>
               </svg>
@@ -284,8 +284,8 @@
                                               /> -->
             </a>
           </li>
-          <li class="social-list-item">
-            <a class="social-list-link footer-social-link" href="" aria-label="линкедин">
+          <li class="social-list__item">
+            <a class="social-list__link footer-social-link" href="" aria-label="линкедин">
               <svg class="social-list-icon footer-social-icon" width="20" height="20">
                 <use href="./images/sprite.svg#icon-linkedin"></use>
               </svg>
@@ -297,22 +297,27 @@
       </div>
       <div class="footer-form">
         <form>
-          <lable class="footer-form-lable">
-            <span class="footer-form-lable-text">Подпишитесь на рассылку</span>
-            <div class="footer-form-lable-wraper">
+          <div class="footer-form-lable-wraper">
+            <lable class="footer-form-lable">
+              <span class="footer-form-lable-text">Подпишитесь на рассылку</span>
+
               <input class="footer-form-input" type="email" name="email" placeholder="E-mail" />
-              <button class="footer-form-button" type="button">
-                Подписаться
-                <svg class="footer-button-icon" width="24" height="24">
-                  <use href="./images/sprite.svg#icon-icon-send"></use>
-                </svg>
-              </button>
-            </div>
-          </lable>
+
+
+            </lable>
+          </div>
+          <button class="footer-form-button" type="button">
+            Подписаться
+            <svg class="footer-button-icon" width="24" height="24">
+              <use href="./images/sprite.svg#icon-icon-send"></use>
+            </svg>
+          </button>
         </form>
       </div>
     </div>
   </footer>
+  <script src="./js/modal.js"></script>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>

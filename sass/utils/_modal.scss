@@ -2,8 +2,13 @@
   display: block;
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   background-color: rgba(0, 0, 0, 0.2);
+
+  padding-top: 93px;
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow-y: scroll;
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
@@ -11,16 +16,15 @@
 }
 
 .modal-form {
-  @include flex-justify($justify: center);
-  flex-wrap: wrap;
+  // @include flex-justify($justify: center);
+  // flex-wrap: wrap;
 
-  position: fixed;
-  width: 100%;
   
-  position: absolute;
-  top: 221px;
-  left: 50%;
-  transform: translateX(-50%);
+  
+  // position: absolute;
+  // top: 221px;
+  // left: 50%;
+  // transform: translateX(-50%);
 
   background-color: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -29,13 +33,19 @@
 
   padding-top: 40px;
   padding-bottom: 40px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width:480px){
+    width: 450px;
+  }
 }
 
 .modal-input {
   display: block;
-  width: 448px;
+  width: 100%;
   height: 40px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);

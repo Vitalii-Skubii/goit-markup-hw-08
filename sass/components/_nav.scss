@@ -1,22 +1,28 @@
 .nav{
   @include flex-justify(center, space-between);
-  border-bottom: 1px solid #ECECEC;
+  
 }
 
-  .header-menu__wraper{
-@media screen and(max-width:767px){
-    display: none;
+@media screen and(max-width:767px)  {
+.header-menu__wraper{
+
+    // display: none;
   position:absolute;
     top: 60px;
     left: 0;
-    border-top: 1px solid #ECECEC;
+   
     background-color:#fff;
     width:100%;
+     display: none;
 
-    
-}
-    
+    z-index: 3;
+
+    &.is-open{
+      display: block;
+    }
   }
+}
+
 
   .nav-menu{
       text-align: center;
