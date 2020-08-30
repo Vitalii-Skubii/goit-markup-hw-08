@@ -1,9 +1,24 @@
 .nav{
-  @include flex-justify(center, space-between);
   
+  @include flex-justify(center, space-between);
+  @media screen and(min-width:768px){
+    @include flex-justify;
+  }
 }
 
+.nav-wraper{
+  @media screen and(min-width:768px)
+  {
+    
+    @include flex-justify(center)
+     }
+  }
+
+
+
 @media screen and(max-width:767px)  {
+  
+
 .header-menu__wraper{
 
     // display: none;
@@ -25,25 +40,32 @@
 
 
   .nav-menu{
-      text-align: center;
+    @media screen and(max-width:767px) {
+       text-align: center;
        padding-bottom: 30px;
     padding-top: 60px;
+    }
+     
   }
 
   .nav-list {
   @extend %list;
     
  
-  
+  @media screen and(min-width:768px){
+    display: flex;
+  }
   
 }
 
 .nav-list-item
  {
+   @media screen and(max-width:767px){
      &:not(:last-child){margin-bottom: 40px;}
+     
  
  }
-
+ }
  
   .nav-link {
     @extend %link;
@@ -94,5 +116,5 @@
     
   }
 }
-
+ 
  
