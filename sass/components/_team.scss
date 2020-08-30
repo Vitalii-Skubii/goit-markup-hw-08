@@ -17,18 +17,26 @@ width: 480px;
   }
   @media screen and(min-width:1200px){
     width: 1200px;
-padding-left: 215px;
-padding-right: 215px;
+
   }
 
   }
   background-color: $secondary-bg-color;
 }
 
-.team-list{
+.team-list {
+  @extend %list;
+  
   @media screen and(min-width:768px){
     display: flex;
     flex-wrap: wrap;
+margin: -15px;
+  }
+
+  @media screen and(min-width:1200px){
+    
+    flex-wrap:nowrap;
+
   }
 }
 
@@ -45,6 +53,11 @@ padding-right: 215px;
    margin: 15px;
   }
 
+  @media screen and(min-width:1200){
+    width: calc((100% - 8 * 15px)/4);
+   margin: 15px;
+  }
+
 }
 
 @media screen and(max-width:767px){
@@ -54,14 +67,16 @@ padding-right: 215px;
 }
 
 
-.team-list {
-  @extend %list;
+
 
   
-}
+
 
 .team-list__img {
-  margin-bottom: 30px;
+  @media screen and (max-width: 767px){
+    margin-bottom: 30px;
+  }
+  
 }
 
 .team-list__name {
@@ -97,6 +112,9 @@ padding-right: 215px;
   margin-top: 0px;
   margin-bottom: 30px;
 
+@media screen and(min-width:768px){
+   margin-bottom: 50px;
+  }
 
 
 }

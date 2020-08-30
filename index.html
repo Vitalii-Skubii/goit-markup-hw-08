@@ -184,13 +184,54 @@
                 </ul>
             </div>
         </section>
+        <!-- Что мы делаем -->
+        <section class="activities">
+            <div class="container">
+                <h2 class="activities-title">Чем мы занимаемся</h2>
+                <ul class="activities-list">
+                    <li class="activities-list-item">
+                        <div class="activities-descr-item">
+                            <img srcset="./images/desktop.jpg 1x, ./images/desktop@2x.jpg 1x" alt="ноутбук" />
+                            <div class=" activities-descr-wraper">
+                                <p class="activities-descr">Десктопные приложения</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="activities-list-item">
+                        <div class="activities-descr-item">
+                            <img srcset="./images/mobile.jpg 1x, ./images/mobile@2x.jpg 2x" alt="смартфон" />
+                            <div class="activities-descr-wraper">
+                                <p class="activities-descr">Мобильные приложения</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="activities-list-item">
+                        <div class="activities-descr-item">
+                            <img srcset="./images/design.jpg 1x, ./images/design@2x.jpg 2x" alt="монитор" />
+                            <div class="activities-descr-wraper">
+                                <p class="activities-descr">Дизайнерские решения</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
         <!-- Наша команда -->
         <section class="team">
             <div class="container">
                 <h2 class="team-title">Наша команда</h2>
                 <ul class="team-list">
                     <li class="team-list__item">
-                        <img class="team-list__img" src="./images/igor-demianenko450.jpg" alt="Дизайнер продукта" />
+                        <picture>
+                            <source srcset="./images/igor-demianenko450.jpg 1x, ./images/igor-demianenko450@2x.jpg 2x"
+                                media="(max-width:767px)">
+                            <source srcset="./images/igor-demianenko354.jpg 1x, ./images/igor-demianenko354@2x.jpg 2x"
+                                media="(min-width:768px)">
+                            <source srcset="./images/igor-demianenko270.jpg 1x, ./images/igor-demianenko270@2x.jpg 2x"
+                                media="(min-width:1200px)">
+                            <img class="team-list__img" src="./images/igor-demianenko354.jpg" alt="Дизайнер продукта" />
+                        </picture>
+
                         <h3 class="team-list__name">Игорь Демьяненко</h3>
                         <p class="team-list__item-descr" lang="en">Product Designer</p>
                         <ul class="social-list">
@@ -233,7 +274,17 @@
                         </ul>
                     </li>
                     <li class="team-list__item">
-                        <img class="team-list__img" src="./images/olga-repina450.jpg" alt="фронтенд разработчик" />
+                        <picture>
+                            <source srcset="./images/olga-repina450.jpg 1x, ./images/olga-repina450@2x.jpg 2x"
+                                media="(max-width:767px)">
+                            <source srcset="./images/olga-repina354.jpg 1x, ./images/olga-repina354@2x.jpg 2x"
+                                media="(min-width:768px)">
+                            <source srcset="./images/olga-repina270.jpg 1x, ./images/olga-repina270@2x.jpg 2x"
+                                media="(min-width:768px)">
+                            <img class="team-list__img" src="./images/olga-repina354.jpg" alt="фронтенд разработчик" />
+                        </picture>
+
+
                         <h3 class="team-list__name">Ольга Репина</h3>
                         <p class="team-list__item-descr" lang="en">Frontend Developer</p>
                         <ul class="social-list">
@@ -276,7 +327,17 @@
                         </ul>
                     </li>
                     <li class="team-list__item">
-                        <img class="team-list__img" src="./images/nikolay-tarasov450.jpg" alt="маркетолог" />
+                        <picture>
+                            <source srcset="./images/nikolay-tarasov450.jpg 1x, ./images/nikolay-tarasov450@2x.jpg 2x"
+                                media="(max-width:767px)">
+                            <source srcset="./images/nikolay-tarasov354.jpg 1x, ./images/nikolay-tarasov354@2x.jpg 2x"
+                                media="(min-width:768px)">
+                            <source srcset="./images/nikolay-tarasov270.jpg 1x, ./images/nikolay-tarasov270@2x.jpg 2x"
+                                media="(min-width:768px)">
+                            <img class="team-list__img" src="./images/nikolay-tarasov354.jpg" alt="маркетолог" />
+                        </picture>
+
+
                         <h3 class="team-list__name">Николай Тарасов</h3>
                         <p class="team-list__item-descr" lang="en">Marketing</p>
                         <ul class="social-list">
@@ -319,8 +380,18 @@
                         </ul>
                     </li>
                     <li class="team-list__item">
-                        <img class="team-list__img" src="./images/mikhail-ermakov450.jpg"
-                            alt="проэктировщик пользовательского интерфейса" />
+                        <picture>
+                            <source srcset="./images/mikhail-ermakov450.jpg 1x, ./images/mikhail-ermakov450@2x.jpg 2x"
+                                media="(max-width:767px)">
+                            <source srcset="./images/mikhail-ermakov354.jpg 1x, ./images/mikhail-ermakov354@2x.jpg 2x"
+                                media="(min-width:768px)">
+                            <source srcset="./images/mikhail-ermakov270.jpg 1x, ./images/mikhail-ermakov270@2x.jpg 2x"
+                                media="(min-width:768px)">
+                            <img class="team-list__img" src="./images/mikhail-ermakov354.jpg"
+                                alt="проэктировщик пользовательского интерфейса" />
+                        </picture>
+
+
                         <h3 class="team-list__name">Михаил Ермаков</h3>
                         <p class="team-list__item-descr" lang="en">UI Designer</p>
                         <ul class="social-list">
@@ -431,6 +502,7 @@
     </main>
     <footer class="footer">
         <div class="container">
+            <div class="footer-wraper">
             <div class="footer-link-list">
                 <a class="logo white" href="./index.html"><span class="logo-blue">Web</span> Studio</a>
                 <address class="footer-adress">
@@ -480,8 +552,9 @@
                     </li>
                 </ul>
             </div>
+            </div>
             <div class="footer-form">
-                <form>
+                <form class="form-container">
                     <div class="footer-form-lable-wraper">
                         <lable class="footer-form-lable">
                             <span class="footer-form-lable-text">Подпишитесь на рассылку</span>
